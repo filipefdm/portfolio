@@ -7,6 +7,8 @@ import { Projetos } from '../components/Projetos';
 import { Knowledges } from '../components/Knowledges';
 import { ContactForm } from '../components/ContactForm';
 import { Footer } from '../components/Footer';
+import { GetStaticProps } from 'next';
+import { getPrismicClient } from '../services/prismic';
 
 export default function Home() {
   return (
@@ -25,3 +27,14 @@ export default function Home() {
     </HomeContainer>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic= getPrismicClient();
+
+  const projectResponse = await prismic.query(
+    
+  )
+
+  return {
+    props: {},
+  };
