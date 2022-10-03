@@ -16,7 +16,7 @@ export default function ProjetoItem({
   img
 }: ProjetoItemProps) {
   return (
-    <ProjetoContainer imgUrl={img}>
+    <ProjetoContainer imgUrl={img} data-aos="fade-up">
       <section>
         <div className="overlay" />
         <div className="text">
@@ -25,7 +25,7 @@ export default function ProjetoItem({
         </div>
       </section>
       <button type="button">
-        <Link href={`/projetos/${slug}`}>
+        <Link href={`/projects/${slug}`}>
           <a>
             Ver mais <AiOutlineRightCircle />
           </a>
