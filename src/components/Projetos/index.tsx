@@ -9,7 +9,9 @@ interface IProject {
   type: string;
   description: string;
   link: string;
-  thumbnail: string;
+  thumbnail: {
+    url: string;
+  };
 }
 
 interface ProjectsProps {
